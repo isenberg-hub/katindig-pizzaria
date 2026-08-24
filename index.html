@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Food Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Katindig's Pizzaria</h1>
+        <p>Good for the whole barkada</p>
+    </header>
+    <main>
+        <h2>Classic Pizza Menu</h2>
+        <div class="food-container">
+            <div class="food">
+                <h3>Cheese Pizza</h3>
+                <p>9"</p>
+                <p>₱150</p>
+                <button onclick="addToCart('Cheese Pizza', 150)">  Add to Cart
+            </div>
+            <div class="food">
+                <h3>Pepperoni Pizza</h3>
+                <p>9"</p>
+                <p>₱150</p>
+                <button onclick="addToCart('Pepperoni Pizza', 150)">  Add to Cart
+            </div>
+            <div class="food">
+                <h3>Hawaiian Pizza</h3>
+                <p>9"</p>
+                <p>₱150</p>
+                <button onclick="addToCart('Hawaiian Pizza', 150)">  Add to Cart
+            </div>
+            <div class="food">
+                <h3>Meat Lover</h3>
+                <p>9"</p>
+                <p>₱150</p>
+                <button onclick="addToCart('Meat Lover', 150)">  Add to Cart
+       </main>
+     <main>
+        <h2>Drinks Menu </h2>
+          <div class="Drinks">
+                      <div class="drinks">
+                <h3>Coke</h3>
+                <p>large</p>
+                <p>₱10</p>
+                <button onclick="addToCart('Coke', 10)">  Add to Cart
+            </div>
+                      <div class="drinks">
+                <h3>Sprite</h3>
+                <p>large</p>
+                <p>₱10</p>
+                <button onclick="addToCart('Sprite', 10)">  Add to Cart
+            </div>
+        </div>
+     </main>
+</body>
+<div class="checkout-container">
+    <section class="cart-section">
+        <h2>Your Cart</h2>
+        <div id="cart">
+            <p>Your cart is empty.</p>
+        </div>
+        <h3>Total: ₱<span id="total">0</span></h3>
+        <button id="clear-cart" onclick="clearCart()">
+            Clear Cart
+        </button>
+    </section>
+    <section class="order-section">
+<form class="order-form">
+   <h2>Place Your Order</h2>
+    <label>Full Name</label>
+    <input type="text" id="name">
+
+    <label>Contact Number</label>
+    <input type="text" id="contact">
+
+    <label>Delivery Address</label>
+    <textarea id="address"></textarea>
+
+    <label>Payment Method</label>
+    <select id="payment">
+        <option>Cash on Delivery</option>
+        <option>GCash</option>
+        <option>Credit/Debit Card</option>
+    </select>
+
+    <button type="button" onclick="placeOrder()">
+        Place Order
+    </button>
+
+</form>
+    </section>
+   <script src="script.js"></script>
+</div>
+</html>
