@@ -1,119 +1,425 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #191616;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #171515;
+    color: white;
 }
+
+
+/* =========================
+   HEADER
+========================= */
+
 header {
-    background-color: #5b04fc;
-    color: aliceblue;
     text-align: center;
-    padding: 30px;
+
+    background-color: #6200ff;
+
+    padding: 45px 20px;
 }
+
+header h1 {
+    margin: 0;
+
+    font-size: 38px;
+}
+
+header p {
+    font-size: 18px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    margin-top: 25px;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    margin: 0 15px;
+
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
 main {
-    width: 80%;
-    margin: 30px auto;
-    color: aliceblue;
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 30px 0 60px;
 }
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+section h2 {
+    font-size: 28px;
+
+    margin-bottom: 25px;
+}
+
+.section-title {
+    margin-top: 50px;
+}
+
+
+/* =========================
+   FOOD CONTAINER
+========================= */
+
 .food-container {
+
     display: grid;
-    grid-template-columns: repeat(2, 300px);
+
+    grid-template-columns:
+        repeat(2, 270px);
+
     gap: 25px;
+
     justify-content: center;
 }
 
+
+/* =========================
+   FOOD CARD
+========================= */
+
 .food {
-    background-color: rgb(0, 0, 0);
+
+    background-color: black;
+
     padding: 20px;
-    width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgb(50, 49, 49);
-}
-button {
-    background-color: #6200ff;
-    color: black;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-}
-button:hover {
-    background-color: #7c2cff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.5);
+
 }
 
-form {
-  color: aliceblue;
-   background-color: rgb(0, 0, 0);
-    padding: 20px;
-    width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgb(50, 49, 49);
+
+/* =========================
+   FOOD IMAGE
+========================= */
+
+.food-image {
+
+    width: 100%;
+
+    height: 130px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #292929;
+
+    border-radius: 8px;
+
+    font-size: 65px;
+
+    margin-bottom: 15px;
 }
-.checkout-container {
-    width: 80%;
-    max-width: 700px;
-    margin: 0 auto;
+
+
+/* =========================
+   FOOD TEXT
+========================= */
+
+.food h3 {
+
+    font-size: 21px;
+
+    margin-top: 5px;
 }
+
+.food p {
+
+    margin: 10px 0;
+}
+
+.price {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #e4e2e8;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+
+    background-color: #6200ff;
+
+    color: black;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition:
+        background-color 0.2s,
+        transform 0.2s;
+}
+
+button:hover {
+
+    background-color: #7c2cff;
+
+}
+
+
+/* =========================
+   CART
+========================= */
 
 .cart-section {
-  background-color: rgb(0, 0, 0);
-    padding: 20px;
-     width: 32%;
-     margin: 5px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgb(50, 49, 49);
-     color: aliceblue;
+
+    width: 90%;
+
+    max-width: 600px;
+
+    margin: 60px auto 40px;
+
+    padding: 25px;
+
+    background-color: black;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.5);
 }
+
+.cart-section h2 {
+
+    margin-top: 0;
+}
+
+.cart-section h3 {
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   CART ITEMS
+========================= */
+
+.cart-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px 0;
+
+    border-bottom:
+        1px solid #333;
+}
+
+.cart-item:last-child {
+
+    border-bottom: none;
+}
+
+
+/* =========================
+   CLEAR CART
+========================= */
+
+#clear-cart {
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   ORDER SECTION
+========================= */
 
 .order-section {
- margin: 40px auto;
+
+    width: 90%;
+
+    max-width: 700px;
+
+    margin: 60px auto 0;
 }
+
+
+/* =========================
+   ORDER FORM
+========================= */
 
 .order-form {
-    background-color: rgb(0, 0, 0);
-    width: 510px;
-    padding: 25px;
-    margin: 5px;
-    border-radius: 10px;
+
+    background-color: black;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.order-form label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 6px;
+.order-form h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 25px;
 }
+
+
+/* =========================
+   FORM LABELS
+========================= */
+
+.order-form label {
+
+    display: block;
+
+    margin-top: 18px;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================
+   FORM INPUTS
+========================= */
 
 .order-form input,
 .order-form textarea,
 .order-form select {
+
     width: 100%;
-    box-sizing: border-box;
-    padding: 9px;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    font-size: 15px;
+
+    font-family: Arial, sans-serif;
 }
 
+
+/* =========================
+   TEXTAREA
+========================= */
+
 .order-form textarea {
-    height: 80px;
+
+    height: 100px;
+
     resize: vertical;
 }
-#clear-cart {
-    margin-top: 15px;
+
+
+/* =========================
+   PLACE ORDER BUTTON
+========================= */
+
+.place-order-button {
+
+    margin-top: 20px;
 }
-.order-form button {
-    margin-top: 90px;
-}
-.Drinks {
-    display: grid;
-    grid-template-columns: repeat(2, 300px);
-    gap: 25px;
-    justify-content: center;
-}
-.drinks {
-    background-color: rgb(0, 0, 0);
-    padding: 20px;
-    width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgb(50, 49, 49);
-}
-nav {
-  color: aliceblue;
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 650px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .food-container {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .food {
+
+        width: 100%;
+
+        max-width: 350px;
+
+        margin: 0 auto;
+    }
+
+    .cart-section,
+    .order-section {
+
+        width: 95%;
+    }
+
+    .order-form {
+
+        padding: 20px;
+    }
+
+    nav a {
+
+        margin: 0 7px;
+    }
 }
